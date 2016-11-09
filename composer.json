@@ -1,9 +1,13 @@
 {
     "name": "benit/holiday",
     "description": "a holiday utility",
+    "keywords": ["holiday", "date"],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/benIT/holiday",
     "authors": [
         {
-            "name": "ben.IT",
+            "name": "benIT",
             "email": "benoit.works@gmail.com"
         }
     ],
