@@ -1,6 +1,6 @@
 <?php
 
-namespace Holiday;
+namespace Holiday\Model;
 
 abstract class AbstractHoliday implements HolidayInterface
 {

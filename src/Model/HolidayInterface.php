@@ -1,6 +1,6 @@
 <?php
 
-namespace Holiday;
+namespace Holiday\Model;
 
 interface HolidayInterface
 {

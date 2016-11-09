@@ -1,6 +1,7 @@
 <?php
-
 namespace Holiday;
+
+use Holiday\Model\AbstractHoliday;
 
 class FrenchHoliday extends AbstractHoliday
 {
