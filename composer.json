@@ -1,0 +1,18 @@
+{
+    "name": "benit/holiday",
+    "description": "a holiday utility",
+    "authors": [
+        {
+            "name": "ben.IT",
+            "email": "benoit.works@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Holiday\\": "src/"
+        }
+    }
+}
