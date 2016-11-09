@@ -51,11 +51,11 @@ abstract class AbstractHoliday implements HolidayInterface
         $cleanedHolidays = [];
         foreach ($holidays as $holiday) {
             if ($mode === self::FILTER_MODE_EXCLUSION) {
-                if (in_array($holiday->format('l'), $filters)) {
+                if (!in_array($holiday->format('l'), $filters)) {
                     $cleanedHolidays [] = $holiday;
                 }
             } else {
-                if (!in_array($holiday->format('l'), $filters)) {
+                if ( in_array($holiday->format('l'), $filters)) {
                     $cleanedHolidays [] = $holiday;
                 }
             }

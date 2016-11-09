@@ -25,3 +25,12 @@ for ($i = intval(date('Y')); $i <= date('Y') + NUMBER_OF_YEAR_TO_PROCESS; ++$i) 
         echo $d->format('l d-m-y').'<br>';
     }
 }
+
+echo sprintf('<h2>Find the holidays that are %s or %s </h2>', AbstractHoliday::SATURDAY, AbstractHoliday::SUNDAY);
+for ($i = intval(date('Y')); $i <= date('Y') + NUMBER_OF_YEAR_TO_PROCESS; ++$i) {
+    echo '<h2>'.$i.'</h2>';
+    $holidayFiltered = FrenchHoliday::getFilteredHolidays($i, [AbstractHoliday::SATURDAY, AbstractHoliday::SUNDAY],AbstractHoliday::FILTER_MODE_INCLUSION);
+    foreach ($holidayFiltered as $d) {
+        echo $d->format('l d-m-y').'<br>';
+    }
+}
