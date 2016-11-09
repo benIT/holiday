@@ -9,7 +9,7 @@ Installation
 -------------------
 
 Composer
-
+composer require benit/holiday
 
 Usage
 -------------------
