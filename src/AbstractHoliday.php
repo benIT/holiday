@@ -2,7 +2,7 @@
 
 namespace Holiday;
 
-abstract class Holiday implements iHoliday
+abstract class AbstractHoliday implements HolidayInterface
 {
     const MONDAY    = 'Monday';
     const TUESDAY   = 'Tuesday';

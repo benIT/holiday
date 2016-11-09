@@ -2,7 +2,7 @@
 
 namespace Holiday;
 
-class FrenchHoliday extends Holiday
+class FrenchHoliday extends AbstractHoliday
 {
     public static function getHolidays($year = null)
     {
