@@ -17,9 +17,9 @@ abstract class AbstractHoliday implements HolidayInterface
 
     public static function getEasterDate($year)
     {
-        $easterTimestamp = easter_date($year);
+        $easter = new \DateTime('@' . easter_date($year));
 
-        return  new \DateTime(sprintf('%d-%d-%d', date('Y', $easterTimestamp), date('n', $easterTimestamp), date('j', $easterTimestamp)));
+        return  $easter ;
     }
 
     public static function getEasterMonday($year)
@@ -40,9 +40,7 @@ abstract class AbstractHoliday implements HolidayInterface
     public static function isClosedDay($year, \Datetime $day)
     {
         $holidays = static::getHolidays($year);
-        return in_array($day,$holidays) ? true : false  ;
-        
-        
+        return in_array($day, $holidays) ? true : false  ;
     }
 
     public static function getFilteredHolidays($year, array $filters, $mode = self::FILTER_MODE_EXCLUSION)
@@ -55,7 +53,7 @@ abstract class AbstractHoliday implements HolidayInterface
                     $cleanedHolidays [] = $holiday;
                 }
             } else {
-                if ( in_array($holiday->format('l'), $filters)) {
+                if (in_array($holiday->format('l'), $filters)) {
                     $cleanedHolidays [] = $holiday;
                 }
             }
