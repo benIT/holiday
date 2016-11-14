@@ -4,6 +4,8 @@ namespace Holiday\Model;
 
 abstract class AbstractHoliday implements HolidayInterface
 {
+	const TIME_ZONE = 'Europe/Paris';
+	
     const MONDAY    = 'Monday';
     const TUESDAY   = 'Tuesday';
     const WEDNESDAY = 'Wednesday';
@@ -18,6 +20,7 @@ abstract class AbstractHoliday implements HolidayInterface
     public static function getEasterDate($year)
     {
         $easter = new \DateTime('@' . easter_date($year));
+        $easter->setTimezone(new \DateTimeZone(self::TIME_ZONE));
 
         return  $easter ;
     }
