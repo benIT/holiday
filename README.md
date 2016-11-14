@@ -1,4 +1,4 @@
-Welcome to Holiday.php
+Welcome to Holiday.php [![Build Status](https://travis-ci.org/benIT/holiday.svg?branch=dev)](https://travis-ci.org/benIT/holiday)
 ===================
 
 
