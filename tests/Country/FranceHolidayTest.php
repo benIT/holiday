@@ -1,10 +1,10 @@
 <?php
-namespace Holiday\tests;
+namespace Holiday\Tests\Country;
 
 use Holiday\Model\AbstractHoliday;
-use Holiday\FrenchHoliday;
+use Holiday\Country\FranceHoliday;
 
-class FrenchHolidayTest extends \PHPUnit_Framework_TestCase
+class FrancehHolidayTest extends \PHPUnit_Framework_TestCase
 {
     public function testFrenchHolidays()
     {
@@ -23,7 +23,7 @@ class FrenchHolidayTest extends \PHPUnit_Framework_TestCase
             new \DateTime(sprintf('%d-%d-%d', $year, 12, 25)),
         ];
 
-        $processedHolidays       = FrenchHoliday::getHolidays($year);
+        $processedHolidays       = FranceHoliday::getHolidays($year);
         $processedHolidaysString = array_map(function ($holiday) {
             return $holiday->format('y-m-d') ;
         }, $processedHolidays);

@@ -1,9 +1,9 @@
 <?php
-namespace Holiday;
+namespace Holiday\Country;
 
 use Holiday\Model\AbstractHoliday;
 
-class UsHoliday extends AbstractHoliday
+class UsaHoliday extends AbstractHoliday
 {
 	
     public static function getHolidays($year = null)
