@@ -6,7 +6,7 @@ use Holiday\Country\FranceHoliday;
 
 class FrancehHolidayTest extends \PHPUnit_Framework_TestCase
 {
-    public function testFrenchHolidays()
+    public function testFranceHolidays()
     {
         $year             = 2016;
         $expectedHolidays = [
@@ -32,4 +32,12 @@ class FrancehHolidayTest extends \PHPUnit_Framework_TestCase
             $this->assertTrue(in_array($expectedHoliday->format('y-m-d'), $processedHolidaysString), $expectedHoliday->format('y-m-d').' is expected to be holiday.');
         }
     }
+    
+    
+     public function testClosedDaysFrance() {
+     	$this->assertTrue( FranceHoliday::isClosedDay(new \DateTime(sprintf('%d-%d-%d', 2016, 3, 28))));
+     	$this->assertTrue( FranceHoliday::isClosedDay(new \DateTime(sprintf('%d-%d-%d', 2016, 12, 25)))); 
+     	
+     }
+    
 }

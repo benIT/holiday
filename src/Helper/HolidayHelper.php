@@ -13,10 +13,10 @@ class HolidayHelper
     }
     
     
-    public static function isClosedDay($country,  $year, \Datetime $day)
+    public static function isClosedDay($country, \Datetime $day)
     {
         if (class_exists(sprintf('Holiday\Country\%sHoliday', $country))) {
-            return call_user_func_array(sprintf('Holiday\Country\%sHoliday::isClosedDay', $country), [$year, $day]);
+            return call_user_func_array(sprintf('Holiday\Country\%sHoliday::isClosedDay', $country), [$day]);
         } else {
             throw new \InvalidArgumentException(sprintf('%s country does not exist.', $country));
         }
