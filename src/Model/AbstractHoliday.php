@@ -40,10 +40,14 @@ abstract class AbstractHoliday implements HolidayInterface
         return self::getEasterDate($year)->add(new \DateInterval('P50D'));
     }
 
-    public static function isClosedDay($year, \Datetime $day)
+    public static function isClosedDay(\Datetime $date)
     {
-        $holidays = static::getHolidays($year);
-        return in_array($day, $holidays) ? true : false  ;
+    	$year = intval($date->format('Y'));
+        $holidaysString = array_map(function ($holiday) {
+            return $holiday->format('y-m-d') ;
+        }, static::getHolidays($year));
+        
+        return in_array($date->format('y-m-d'), $holidaysString) ? true : false  ;
     }
 
     public static function getFilteredHolidays($year, array $filters, $mode = self::FILTER_MODE_EXCLUSION)
