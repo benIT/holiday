@@ -1,5 +1,5 @@
 <?php
-namespace Holiday\Tests\Country;
+namespace Holiday\tests\Country;
 
 use Holiday\Model\AbstractHoliday;
 use Holiday\Country\FranceHoliday;

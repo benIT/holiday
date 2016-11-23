@@ -1,5 +1,5 @@
 <?php
-namespace Holiday\Tests\Helper;
+namespace Holiday\tests\Helper;
 
 use Holiday\Helper\HolidayHelper;
 

@@ -1,5 +1,5 @@
 <?php
-namespace Holiday\Tests\Country;
+namespace Holiday\tests\Country;
 
 use Holiday\Model\AbstractHoliday;
 use Holiday\Country\UsaHoliday;
@@ -31,7 +31,7 @@ class UsaHolidayTest extends \PHPUnit_Framework_TestCase
             new \DateTime(sprintf('%d-%d-%d', self::$year, 12, 31)),
         ];
         
-        self::$processedHolidays       = UsaHoliday::getHolidays(self::$year);
+        self::$processedHolidays               = UsaHoliday::getHolidays(self::$year);
         self::$processedHolidaysString         = array_map(function ($holiday) {
             return $holiday->format('y-m-d') ;
         }, self::$processedHolidays);

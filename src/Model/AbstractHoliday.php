@@ -4,8 +4,8 @@ namespace Holiday\Model;
 
 abstract class AbstractHoliday implements HolidayInterface
 {
-	const TIME_ZONE = 'Europe/Paris';
-	
+    const TIME_ZONE = 'Europe/Paris';
+    
     const MONDAY    = 'Monday';
     const TUESDAY   = 'Tuesday';
     const WEDNESDAY = 'Wednesday';
@@ -42,7 +42,7 @@ abstract class AbstractHoliday implements HolidayInterface
 
     public static function isClosedDay(\Datetime $date)
     {
-    	$year = intval($date->format('Y'));
+        $year           = intval($date->format('Y'));
         $holidaysString = array_map(function ($holiday) {
             return $holiday->format('y-m-d') ;
         }, static::getHolidays($year));

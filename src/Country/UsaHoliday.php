@@ -5,10 +5,9 @@ use Holiday\Model\AbstractHoliday;
 
 class UsaHoliday extends AbstractHoliday
 {
-	
     public static function getHolidays($year = null)
     {
-    	//@see http://www.theholidayschedule.com/banks/us-bank-holidays.php
+        //@see http://www.theholidayschedule.com/banks/us-bank-holidays.php
         $year === null ? $year = intval(date('Y')) : $year = intval($year);
         $holidays              = [
             new \DateTime(sprintf('%d-%d-%d', $year, 1, 1)),
