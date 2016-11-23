@@ -6,9 +6,15 @@
          verbose="true">
          
         <testsuites>
-		    <testsuite name="Holiday Test Suite">
+		    <testsuite name="full">
 		        <directory>./tests</directory>
 		    </testsuite>
+			<testsuite name="helper">
+			        <directory>./tests/Helper</directory>
+			</testsuite>
+			<testsuite name="country">
+			        <directory>./tests/Country</directory>
+			</testsuite>
     	</testsuites>
 
 </phpunit>
