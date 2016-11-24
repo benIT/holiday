@@ -1,4 +1,4 @@
-Welcome to Holiday.php ! [![Build Status](https://travis-ci.org/benIT/holiday.svg?branch=dev)](https://travis-ci.org/benIT/holiday)
+Welcome to Holiday.php ! [![Build Status](https://travis-ci.org/benIT/holiday.svg?branch=dev)](https://travis-ci.org/benIT/holiday) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/benIT/holiday/badges/quality-score.png?b=dev)](https://scrutinizer-ci.com/g/benIT/holiday/?branch=dev)
 ===================
 Holidays are a very important stuff in life, this library provides tools to manage holidays.
 
